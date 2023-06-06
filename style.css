@@ -1,0 +1,45 @@
+.header {
+  text-align: center;
+  font-size: 10rem;
+  margin-bottom: -10px;
+}
+.main-square {
+  background-color: rgb(180, 169, 169);
+  width: 500px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.square-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(48, 48, 48);
+  width: 100%;
+  height: 20%;
+  margin-top: 10px;
+}
+
+.square-row-container {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  background-color: rgb(180, 169, 169);
+  margin-left: 20px;
+  width: 100%;
+  height: 100;
+  margin-left: auto;
+  margin-left: auto;
+}
+
+.square {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+  display: inline-block;
+  border-color: gray;
+  margin-left: auto;
+  margin-left: auto;
+}
