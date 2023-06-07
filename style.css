@@ -1,46 +1,54 @@
 .header {
   text-align: center;
-  font-size: 10rem;
+  font-size: 3rem;
   margin-bottom: -10px;
 }
-.main-square {
-  background-color: rgb(180, 169, 169);
-  width: 500px;
-  height: 500px;
+.body {
+  display: grid;
+  place-items: center;
+}
+.game-container {
+  width: 12rem;
+  height: 14rem;
   margin-left: auto;
   margin-right: auto;
-}
-
-.square-container {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(48, 48, 48);
-  width: 100%;
-  height: 20%;
-  margin-top: 10px;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 20px;
+  box-sizing: border-box;
 }
 
 .square-row-container {
   display: grid;
-
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 10px;
-  background-color: rgb(180, 169, 169);
-  margin-left: 20px;
+  gap: 5px;
   width: 100%;
-  height: 100;
-  margin-left: auto;
-  margin-left: auto;
+  height: 160%;
 }
 
 .square {
-  width: 100%;
-  height: 100%;
-  background-color: #f0f0f0;
-  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+  border: 2px solid rgb(3, 0, 0);
+}
+
+.keyboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.keyboard-row {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.letter {
+  background-color: rgb(75, 75, 75);
+  border: none;
   display: inline-block;
-  border-color: gray;
-  margin-left: auto;
-  margin-left: auto;
-  border: 2px solid black;
+
 }
