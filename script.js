@@ -26,7 +26,9 @@ letters.forEach((letter) => {
 });
 
 addEventListener("keypress", (event) => {
-  try {
-    document.getElementById(event.key.toUpperCase()).classList.add("vibrate");
-  } catch (ignored) {}
+  //   try {
+  document.getElementById(event.key.toUpperCase()).classList.add("vibrate");
+  //   } catch (ignored) {
+  //     console.log("breh");
+  //   }
 });
