@@ -2,25 +2,23 @@ const word = "hello";
 
 let attempt = 0;
 
-const guess = "hello".split("");
+var guess = [];
 
 function addLetter(letter) {
-  return guess.length < 5 && guess.push(letter) && update();
+  return guess.length < 5 && guess.push(letter) && updateGame();
 }
 
 function deleteLetter() {
-  return guess.length > 0 && guess.pop() && update();
+  return guess.length > 0 && guess.pop() && updateGame();
 }
 
-function update() {
-  let currentRow = document.querySelectorAll(".square-row-container")[0];
-  console.log(currentRow);
-  for (let i = 0; i < guess.length; i++) {
-    let box = currentRow.querySelectorAll(".square")[i];
-    console.log(box);
-    box.innerText = guess[i];
+function updateGame() {
+  let currentRow = document.querySelectorAll(".square-row-container")[attempt];
+  for (let i = 0; i < 5; i++) {
+    let span = document.getElementById(`${i}`);
+    span.innerText = guess[i] != undefined ? guess[i] : "";
   }
 }
-update();
 
 console.log(guess);
+export { addLetter, deleteLetter, updateGame };

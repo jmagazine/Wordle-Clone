@@ -29,7 +29,20 @@
 .square {
   background-color: rgb(255, 255, 255);
   padding: 5px;
-  border: 2px solid rgb(3, 0, 0);
+  border: 2px solid rgb(189, 189, 189);
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square > span {
+  font-size: 0.6rem;
+  transform: scale(3.5);
+  font-family: sans-serif;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 .keyboard-container {
@@ -46,7 +59,7 @@
   text-align: center;
 }
 
-.letter {
+.key {
   background-color: rgb(75, 75, 75);
   border: none;
   display: inline-block;
@@ -65,7 +78,7 @@
 }
 
 /* Animations */
-.letter.vibrate {
+.key.vibrate {
   animation: horizontal-shaking 0.1s 1 forwards;
 }
 @keyframes horizontal-shaking {
