@@ -1,5 +1,5 @@
 "use strict";
-import { addLetter, deleteLetter } from "./game.js";
+import { active, addLetter, deleteLetter, evaluate } from "./game.js";
 const row0 = document.querySelectorAll(".keyboard-row")[0];
 const letters0 = row0.querySelectorAll(".key");
 const row1 = document.querySelectorAll(".keyboard-row")[1];
@@ -24,6 +24,7 @@ letters.forEach((key) => {
   });
 });
 
+// for letters
 addEventListener("keypress", (event) => {
   try {
     document.getElementById(event.key.toUpperCase()).classList.add("vibrate");
@@ -34,5 +35,8 @@ addEventListener("keypress", (event) => {
 addEventListener("keydown", (event) => {
   if (event.key === "Backspace" || event.key === "Delete") {
     deleteLetter();
+  }
+  if (event.key === "Enter") {
+    evaluate();
   }
 });
